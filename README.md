@@ -1,4 +1,4 @@
-# machine_learning_challange_b2_21-22
+# machine_learning_challange_b2_21/22
 Group assignment for the Machine Learning course at Tilburg University:
 
 Me and my team was tasked with a scientific publication citation prediction task. We have scored the 2nd place among the 50+ teams with the R^2 score of 0.5370.
