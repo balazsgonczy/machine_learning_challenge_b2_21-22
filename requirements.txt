@@ -1,0 +1,22 @@
+click==8.0.3
+colorama==0.4.4
+Cython==0.29.23
+gensim==4.1.2
+gsdmm @ git+https://github.com/rwalk/gsdmm.git@4ad1b6b6976743681ee4976b4573463d359214ee
+joblib==1.1.0
+lightgbm==3.3.1
+nltk==3.6.5
+numpy==1.21.4
+pandas==1.3.4
+pyphen==0.11.0
+python-dateutil==2.8.2
+pytz==2021.3
+regex==2021.11.10
+scikit-learn==1.0.1
+scipy==1.7.3
+six==1.16.0
+smart-open==5.2.1
+textfeatures==0.0.2
+textstat==0.7.2
+threadpoolctl==3.0.0
+tqdm==4.62.3
