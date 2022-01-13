@@ -204,19 +204,26 @@ def desc_text_features(df, text_features):
 ###Function for cleaning venues in order to create dummy variables from most frequent ones
 def clean_venue(df, list_of_dictionaries):
     venue_cleaned = []
+    
     for dictionary in list_of_dictionaries:
         venue = dictionary["venue"]
         venue = venue.lower()
+        
         if "@" in venue:    ## remove "@" - @s are used for workshops within conferences - if we want to make nr. of unique venus lower, this is crucial 
             venue = venue[:venue.find("@")]
+            
         if " 19" in venue:  ## finding years 19xx - removing those to unify them with conference
             venue = venue[:venue.find(" 19")]
+            
         if " 20" in venue:  ## finding years 20xx - removing those to unify them with conference
             venue = venue[:venue.find(" 20")]
+            
         if "/" in venue:  ## same as above, but we take IJCNLP, we 
             venue = venue[venue.find("/")+1:]
+            
         if "*" in venue:    ## removing * from *SEMEVAL and *SEM
             venue = venue[venue.find("*")+1:]  
+            
         if " " in venue:       ## searching for venues with longer string - finding abbrv.
             venue = venue.split(" ")  
             for word in venue:     
@@ -228,6 +235,7 @@ def clean_venue(df, list_of_dictionaries):
                     venue = word    
             if type(venue) == list:   ##if we are left with list, no abbreviation found
                 venue = " ".join(venue)
+                
         if "-" in venue:    ## remove "-" - we are not sure about this, but at least based on distribution, this seems to be correct way 
             venue = venue[:venue.find("-")]
         venue = venue.upper()
