@@ -649,19 +649,6 @@ def gsdmm_topics_on_titles(train_json, test_json, n_topics=20, a=0.1, b=0.1, n_i
 
     return train_df, test_df #Renamed from _json!
 
-
-# In[14]:
-
-
-###Function for Converting MSE to r2
-
-def r2(MSE, target, n=9658):
-    y_hat = np.mean(target)
-    SSE = MSE*n
-    SST = np.sum((target - y_hat)**2)
-    return 1 - SSE/SST
-
-
 # In[15]:
 
 
@@ -867,17 +854,6 @@ LGBM = lgb.LGBMRegressor(objective = 'regression',
                          subsample = 0.8333333333333333,
                          n_estimators = 965, 
                          random_state = 532)
-
-#Splitting the data
-# X_train, X_val, y_train, y_val = train_test_split(features, target, test_size=1/3, random_state=999)
-
-#Fitting and validating the data
-# LGBM = LGBM.fit(X_train, y_train)
-# y_pred = LGBM.predict(X_val)
-
-#Printing out the validation results
-# print(mean_absolute_error(y_val, y_pred))
-# print(r2_score(y_val, y_pred))
 
 
 # In[19]:
