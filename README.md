@@ -7,6 +7,6 @@ Collaborators:
 - linkedin.com/in/balázs-gönczy-5b1445161
 - linkedin.com/in/katharina-pritzl
 - linkedin.com/in/mikhail-bogdanov
-- linkedin.com/in/balázs-gönczy-5b1445161
+- linkedin.com/in/milan-fedorik
 
 Please feel free to read our analysis pdf file if you are interested in our workflow!
